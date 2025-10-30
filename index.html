@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Jacquard+24&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #160b3f;
+        }
+        .sidebar{
+            font-family: 'Fondamento', serif;
+            height: 100vh;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #28127e;
+            padding-top: 20px;
+        }
+        .sidebar h1{
+            font-family: Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sidebar a{
+            display: block;
+            color: #feffd9;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar a:hover{
+            background-color: #5e42dc;
+        }
+        .content{
+            margin-left: 220px;
+            padding-left: 20px;
+        }
+        .content h1{
+            font-family: 'Jacquard 24', sans-serif;
+            font-size: 70px;
+            color:#feffd9;
+        }
+        .form{
+            background-color: #5f4bb1;
+            padding: 20px;
+            border-radius: 8px;
+            width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Fondamento', serif;
+            color:#feffd9;
+            font-size: large;
+        }
+        input[type="text"], input[type="number"]{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #7e5df7;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="create.html">Cadastro de Livros</a>
+        <a href="read.html">Consulta de Livros</a>
+        <a href="update.html">Listar Livros</a>
+        <a href="delete.html">Excluir livros</a>
+    </div>
+    <div class="content">
+        <h1>Cadastro de Livros:</h1>
+        <div class="form">
+            <form id="form-livro" autocomplete="off">
+                <!-- nome, editora, ano de publicação -->
+                <label for="nome">Nome do livro:</label>
+                <input type="text" id="nome" name="nome" required><br><br>
+                <label for="editora">Editora:</label>
+                <input type="text" id="editora" name="editora" required><br><br>
+                <label for="ano">Ano de publicação:</label>
+                <input type="number" id="ano" name="ano" required><br><br>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
