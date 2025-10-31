@@ -23,4 +23,13 @@ public class LivroService {
     public void deletarLivro(Long id){
         livroRepository.deleteById(id);
     }
+    public Livro atualizarLivro(Long id, Livro livro){
+        Livro livroExistente = livroRepository.findById(id).orElseThrow(() -> new RuntimeException("Livro não encontrado"));
+        livroExistente.setTitulo(livro.getTitulo());
+        livroExistente.setAutor(livro.getAutor());
+        livroExistente.setEditora(livro.getEditora());
+        livroExistente.setAnoPublicacao(livro.getAnoPublicacao());
+        return livroRepository.save(livroExistente);
+    }
+    
 }
