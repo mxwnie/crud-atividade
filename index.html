@@ -22,8 +22,9 @@
             padding-top: 20px;
         }
         .sidebar h1{
-            font-family: Helvetica, sans-serif;
-            color: white;
+            font-family: 'Jacquard 24', sans-serif;
+            font-size: 36px;
+            color: #feffd9;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -33,6 +34,7 @@
             padding: 15px 20px;
             text-decoration: none;
             font-size: 18px;
+            transition: background-color 200ms;
         }
         .sidebar a:hover{
             background-color: #5e42dc;
@@ -65,10 +67,37 @@
             box-sizing: border-box;
             font-size: 16px;
         }
+        .button{
+            background-color: #ac94ff;
+            border: 1px solid #4217dc;
+            border-radius: 5px;
+            font-family: 'Fondamento', serif;
+            font-size: 40px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            color: #feffd9;
+            font-size: large;
+            transition: background-color 200ms;
+        }
+        .button:hover{
+            background-color: #9781fa;
+            
+        }
+        #tabela{
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Fondamento', serif;
+            color: #160b3f;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
+        <h1>Biblioteca</h1>
         <a href="create.html">Cadastro de Livros</a>
         <a href="read.html">Consulta de Livros</a>
         <a href="update.html">Listar Livros</a>
@@ -85,11 +114,22 @@
                 <input type="text" id="autor" name="autor" required><br><br>
                 <label for="editora">Editora:</label>
                 <input type="text" id="editora" name="editora" required><br><br>
-                <label for="ano">Ano de publicação:</label>
-                <input type="number" id="ano" name="ano" required><br><br>
+                <label for="anoPublicacao">Ano de publicação:</label>
+                <input type="number" id="anoPublicacao" name="anoPublicacao" required><br><br>
+                <input type="button" class="button" value="Cadastrar livro">
             </form>
         </div>
+        <table id="tabela">
+        <thead>
+            <tr>
+            <th>ID</th><th>Título</th><th>Autor</th><th>Editora</th>
+            <th>Ano de Publicação</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
     </div>
     
 </body>
+<script src="script.js"></script>
 </html>

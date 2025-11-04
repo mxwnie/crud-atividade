@@ -12,7 +12,7 @@ public class Livro {
     private String titulo;
     private String autor;
     private String editora;
-    private int anoPublicacao;
+    private Integer anoPublicacao;
 
     public Long getId() {
         return id;
@@ -50,7 +50,7 @@ public class Livro {
         return anoPublicacao;
     }
 
-    public void setAnoPublicacao(int anoPublicacao) {
+    public void setAnoPublicacao(Integer anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }
 }
